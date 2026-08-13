@@ -1,0 +1,31 @@
+2026-08-11 21:48:49,689 - INFO - Fetching agencysubelements from https://data.usajobs.gov/api/codelist/agencysubelements
+2026-08-11 21:48:51,154 - INFO - Writing agencysubelements to ../analytics/data/bronze/codelists/agencysubelements.json
+2026-08-11 21:48:51,168 - INFO - Successfully fetched and saved agencysubelements to ../analytics/data/bronze/codelists/agencysubelements.json
+2026-08-11 21:48:51,168 - INFO - Fetching occupationalseries from https://data.usajobs.gov/api/codelist/occupationalseries
+2026-08-11 21:48:52,412 - INFO - Writing occupationalseries to ../analytics/data/bronze/codelists/occupationalseries.json
+2026-08-11 21:48:52,422 - INFO - Successfully fetched and saved occupationalseries to ../analytics/data/bronze/codelists/occupationalseries.json
+2026-08-11 21:48:52,422 - INFO - Fetching payplans from https://data.usajobs.gov/api/codelist/payplans
+2026-08-11 21:48:52,707 - INFO - Writing payplans to ../analytics/data/bronze/codelists/payplans.json
+2026-08-11 21:48:52,712 - INFO - Successfully fetched and saved payplans to ../analytics/data/bronze/codelists/payplans.json
+2026-08-11 21:48:52,712 - INFO - Fetching securityclearances from https://data.usajobs.gov/api/codelist/securityclearances
+2026-08-11 21:48:53,381 - INFO - Writing securityclearances to ../analytics/data/bronze/codelists/securityclearances.json
+2026-08-11 21:48:53,383 - INFO - Successfully fetched and saved securityclearances to ../analytics/data/bronze/codelists/securityclearances.json
+2026-08-11 21:48:53,383 - INFO - Fetching hiringpaths from https://data.usajobs.gov/api/codelist/hiringpaths
+2026-08-11 21:48:54,061 - INFO - Writing hiringpaths to ../analytics/data/bronze/codelists/hiringpaths.json
+2026-08-11 21:48:54,062 - INFO - Successfully fetched and saved hiringpaths to ../analytics/data/bronze/codelists/hiringpaths.json
+2026-08-11 21:48:54,063 - INFO - Fetching positionscheduletypes from https://data.usajobs.gov/api/codelist/positionscheduletypes
+2026-08-11 21:48:54,758 - INFO - Writing positionscheduletypes to ../analytics/data/bronze/codelists/positionscheduletypes.json
+2026-08-11 21:48:54,758 - INFO - Successfully fetched and saved positionscheduletypes to ../analytics/data/bronze/codelists/positionscheduletypes.json
+2026-08-11 21:48:54,758 - INFO - Fetching positionofferingtypes from https://data.usajobs.gov/api/codelist/positionofferingtypes
+2026-08-11 21:48:55,348 - INFO - Writing positionofferingtypes to ../analytics/data/bronze/codelists/positionofferingtypes.json
+2026-08-11 21:48:55,349 - INFO - Successfully fetched and saved positionofferingtypes to ../analytics/data/bronze/codelists/positionofferingtypes.json
+2026-08-11 21:48:55,349 - INFO - Fetching travelpercentages from https://data.usajobs.gov/api/codelist/travelpercentages
+2026-08-11 21:48:55,993 - INFO - Writing travelpercentages to ../analytics/data/bronze/codelists/travelpercentages.json
+2026-08-11 21:48:55,994 - INFO - Successfully fetched and saved travelpercentages to ../analytics/data/bronze/codelists/travelpercentages.json
+2026-08-11 21:48:55,994 - INFO - Fetching countries from https://data.usajobs.gov/api/codelist/countries
+2026-08-11 21:48:57,556 - INFO - Writing countries to ../analytics/data/bronze/codelists/countries.json
+2026-08-11 21:48:57,560 - INFO - Successfully fetched and saved countries to ../analytics/data/bronze/codelists/countries.json
+2026-08-11 21:48:57,560 - INFO - Fetching countrysubdivisions from https://data.usajobs.gov/api/codelist/countrysubdivisions
+2026-08-11 21:49:00,238 - INFO - Writing countrysubdivisions to ../analytics/data/bronze/codelists/countrysubdivisions.json
+2026-08-11 21:49:00,257 - INFO - Successfully fetched and saved countrysubdivisions to ../analytics/data/bronze/codelists/countrysubdivisions.json
+2026-08-11 21:49:00,257 - INFO - All codelists have been processed.
