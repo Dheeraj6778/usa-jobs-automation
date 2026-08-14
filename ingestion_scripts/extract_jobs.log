@@ -1,0 +1,7 @@
+2026-08-13 20:01:53,438 - INFO - Fetching job postings from https://data.usajobs.gov/api/Search with date_posted=1
+2026-08-13 20:01:53,438 - INFO - Fetching jobs on page 1 with params: {'ResultsPerPage': 500, 'Page': 1, 'DatePosted': 1}
+2026-08-13 20:01:54,956 - INFO - Page 1/2 — got 500 jobs (total available: 978)
+2026-08-13 20:01:54,956 - INFO - Fetching jobs on page 2 with params: {'ResultsPerPage': 500, 'Page': 2, 'DatePosted': 1}
+2026-08-13 20:01:56,080 - INFO - Page 2/2 — got 478 jobs (total available: 978)
+2026-08-13 20:01:56,080 - INFO - All pages fetched.
+2026-08-13 20:01:56,261 - INFO - Successfully fetched and saved 978 job postings to ../analytics/data/bronze/daily/2026-08-13/job_postings.json
