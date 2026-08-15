@@ -1,0 +1,42 @@
+# models/staging/sources.yml
+version: 2
+
+sources:
+  - name: bronze_codelists
+    tables:
+      - name: agencysubelements
+        meta:
+          external_location: "read_json_auto('/Users/dheeraj/Desktop/dbt-duckdb-demo/analytics/data/bronze/codelists/agencysubelements.json')"
+      - name: occupationalseries
+        meta:
+          external_location: "read_json_auto('/Users/dheeraj/Desktop/dbt-duckdb-demo/analytics/data/bronze/codelists/occupationalseries.json')"
+      - name: payplans
+        meta:
+          external_location: "read_json_auto('/Users/dheeraj/Desktop/dbt-duckdb-demo/analytics/data/bronze/codelists/payplans.json')"
+      - name: securityclearances
+        meta:
+          external_location: "read_json_auto('/Users/dheeraj/Desktop/dbt-duckdb-demo/analytics/data/bronze/codelists/securityclearances.json')"
+      - name: hiringpaths
+        meta:
+          external_location: "read_json_auto('/Users/dheeraj/Desktop/dbt-duckdb-demo/analytics/data/bronze/codelists/hiringpaths.json')"
+      - name: positionscheduletypes
+        meta:
+          external_location: "read_json_auto('/Users/dheeraj/Desktop/dbt-duckdb-demo/analytics/data/bronze/codelists/positionscheduletypes.json')"
+      - name: positionofferingtypes
+        meta:
+          external_location: "read_json_auto('/Users/dheeraj/Desktop/dbt-duckdb-demo/analytics/data/bronze/codelists/positionofferingtypes.json')"
+      - name: travelpercentages
+        meta:
+          external_location: "read_json_auto('/Users/dheeraj/Desktop/dbt-duckdb-demo/analytics/data/bronze/codelists/travelpercentages.json')"
+      - name: countries
+        meta:
+          external_location: "read_json_auto('/Users/dheeraj/Desktop/dbt-duckdb-demo/analytics/data/bronze/codelists/countries.json')"
+      - name: countrysubdivisions
+        meta:
+          external_location: "read_json_auto('/Users/dheeraj/Desktop/dbt-duckdb-demo/analytics/data/bronze/codelists/countrysubdivisions.json')"
+
+  - name: bronze_jobs
+    tables:
+      - name: daily_job_postings
+        meta:
+          external_location: "read_json_auto('/Users/dheeraj/Desktop/dbt-duckdb-demo/analytics/data/bronze/daily/*/*.json', filename=true)"
