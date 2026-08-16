@@ -28,7 +28,8 @@ with cte_cleaned as (
         organization_name,
         department_name,
         sub_agency_name,
-        organization_codes
+        organization_codes,
+        split_part(organization_codes,'/',1) as agency_code,
 
         -- LOCATION ---
         location_display,
@@ -141,3 +142,4 @@ from cte_cleaned
 {% if is_incremental() %}
     WHERE loaded_at > (SELECT MAX(loaded_at) FROM {{ this }})
 {% endif %}
+

@@ -1,8 +1,12 @@
-
-
-select 
-    salary_min_annual,
-    salary_max_annual,
-    rate_interval_code
+select *
 from {{ref('silver_job_postings')}}
-where  rate_interval_code='WC'
+
+
+SELECT count(*) FROM {{ source('bronze_jobs', 'daily_job_postings') }}
+
+
+select location_id,
+        count(*)
+from {{ref('dim_location')}}
+group by location_id
+having count(*)>1

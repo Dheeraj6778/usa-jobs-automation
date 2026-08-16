@@ -122,5 +122,5 @@ SELECT
 
 FROM raw_jobs
 {% if is_incremental() %}
-WHERE filename NOT IN (SELECT DISTINCT source_file FROM {{ this }})
+WHERE filename NOT IN (SELECT DISTINCT source_filename FROM {{ this }})
 {% endif %}

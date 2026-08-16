@@ -20,6 +20,9 @@ models:
       - name: application_close_date
         tests:
           - not_null
+      - name: organization_codes
+        tests:
+          - not_null
 
   - name: silver_agencies
     columns:

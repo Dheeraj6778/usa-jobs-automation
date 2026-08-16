@@ -1,0 +1,56 @@
+# models/gold/schema.yml
+version: 2
+
+models:
+  - name: fact_job_postings
+    description: "Fact table containing all job postings with dimension keys"
+    columns:
+      - name: control_number
+        tests:
+          - unique
+          - not_null
+      - name: publication_date_key
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+      - name: location_id
+        tests:
+          - relationships:
+              to: ref('dim_location')
+              field: location_id
+      - name: agency_code
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_agency')
+              field: agency_code
+
+  - name: dim_date
+    columns:
+      - name: date_key
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_agency
+    columns:
+      - name: agency_code
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_occupation
+    columns:
+      - name: occupational_series_code
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_location
+    columns:
+      - name: location_id
+        tests:
+          - unique
+          - not_null
