@@ -33,4 +33,6 @@ models:
   analytics:
     staging:
       +materialized: view
+    silver:
+      +materialized: view
     

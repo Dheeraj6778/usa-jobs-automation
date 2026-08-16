@@ -1,0 +1,43 @@
+# models/silver/schema.yml
+version: 2
+
+models:
+  - name: silver_job_postings
+    columns:
+      - name: control_number
+        tests:
+          - unique
+          - not_null
+      - name: salary_min_annual
+        tests:
+          - not_null
+      - name: salary_max_annual
+        tests:
+          - not_null
+      - name: publication_start_date
+        tests:
+          - not_null
+      - name: application_close_date
+        tests:
+          - not_null
+
+  - name: silver_agencies
+    columns:
+      - name: agency_code
+        tests:
+          - unique
+          - not_null
+
+  - name: silver_occupations
+    columns:
+      - name: occupational_series_code
+        tests:
+          - unique
+          - not_null
+
+  - name: silver_pay_plans
+    columns:
+      - name: pay_plan_code
+        tests:
+          - unique
+          - not_null
