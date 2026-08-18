@@ -18,3 +18,5 @@ target/
 dbt_packages/
 logs/
 .env
+
+setup_env.sh

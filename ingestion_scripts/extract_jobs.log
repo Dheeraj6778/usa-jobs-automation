@@ -10,3 +10,11 @@
 2026-08-16 09:37:09,961 - INFO - Page 1/1 — got 68 jobs (total available: 68)
 2026-08-16 09:37:09,961 - INFO - All pages fetched.
 2026-08-16 09:37:09,977 - INFO - Successfully fetched and saved 68 job postings to ../analytics/data/bronze/daily/2026-08-16/job_postings.json
+2026-08-17 20:09:09,138 - INFO - Found credentials in environment variables.
+2026-08-17 20:09:09,288 - INFO - Fetching job postings from https://data.usajobs.gov/api/Search with date_posted=1
+2026-08-17 20:09:09,288 - INFO - Fetching jobs on page 1 with params: {'ResultsPerPage': 500, 'Page': 1, 'DatePosted': 1}
+2026-08-17 20:09:10,168 - INFO - Page 1/2 — got 500 jobs (total available: 973)
+2026-08-17 20:09:10,168 - INFO - Fetching jobs on page 2 with params: {'ResultsPerPage': 500, 'Page': 2, 'DatePosted': 1}
+2026-08-17 20:09:11,193 - INFO - Page 2/2 — got 473 jobs (total available: 973)
+2026-08-17 20:09:11,193 - INFO - All pages fetched.
+2026-08-17 20:09:12,666 - INFO - Uploaded 973 jobs to s3://usajobs-pipeline-dk/bronze/daily/2026-08-17/job_postings.json

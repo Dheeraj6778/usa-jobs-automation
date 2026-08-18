@@ -4,6 +4,7 @@ import os
 import logging
 from dotenv import load_dotenv
 from datetime import date
+import boto3
 
 load_dotenv()  # Load environment variables from .env file
 
@@ -17,6 +18,9 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
+
+s3 = boto3.client('s3')
+BUCKET = "usajobs-pipeline-dk"
 
 base_url = "https://data.usajobs.gov/api/Search"
 
@@ -65,8 +69,19 @@ while True:
         logger.error(f"Error occurred while fetching jobs on page {page}: {e}")
         break
 
-output_file = os.path.join(OUTPUT_DIR, f"job_postings.json")
+# output_file = os.path.join(OUTPUT_DIR, f"job_postings.json")
 
-with open(output_file, "w") as f:
-    json.dump(all_jobs, f, indent=2)
-logger.info(f"Successfully fetched and saved {len(all_jobs)} job postings to {output_file}")
+# with open(output_file, "w") as f:
+#     json.dump(all_jobs, f, indent=2)
+# logger.info(f"Successfully fetched and saved {len(all_jobs)} job postings to {output_file}")
+
+today = date.today().isoformat()
+key = f"bronze/daily/{today}/job_postings.json"
+s3.put_object(
+    Bucket=BUCKET,
+    Key = key,
+    Body = json.dumps(all_jobs),
+    ContentType="application/json"
+)
+logger.info(f"Uploaded {len(all_jobs)} jobs to s3://{BUCKET}/{key}")
+
