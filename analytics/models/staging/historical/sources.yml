@@ -1,0 +1,9 @@
+# models/staging/historical/sources.yml
+version: 2
+
+sources:
+  - name: bronze_historical
+    tables:
+      - name: historical_job_postings
+        meta:
+          external_location: "read_json_auto('s3://usajobs-pipeline-dk/bronze/historical/*/*.json', filename=true)"

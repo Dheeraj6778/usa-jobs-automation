@@ -34,10 +34,15 @@ models:
     staging:
       +schema: staging
       +materialized: view
+      historical:
+        +materialized: incremental
     silver:
       +schema: silver
       +materialized: view
+      historical:
+        +materialized: incremental
     gold:
       +schema: gold
       +materialized: table
-    
+      historical:
+        +materialzed: table
